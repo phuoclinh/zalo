@@ -8,7 +8,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ZaloSDK",
-            targets: ["ZaloSDK"])
+            targets: ["ZaloSDK"]),
+        .library(
+            name: "ZaloSDKCoreKit",
+            targets: ["ZaloSDKCoreKit"])
     ],
     dependencies: [
     ],
@@ -16,6 +19,10 @@ let package = Package(
         .binaryTarget(
             name: "ZaloSDK",
             path: "ZaloSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZaloSDKCoreKit",
+            path: "ZaloSDKCoreKit.xcframework"
         )
     ]
 )
